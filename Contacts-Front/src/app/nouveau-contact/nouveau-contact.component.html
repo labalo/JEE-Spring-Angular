@@ -1,0 +1,32 @@
+<div class="container spaer">
+  <div class="panel panel-default">
+    <div class="panel-heading">Ajout d'un Contact</div>
+    <div class="panel-body">
+  <form #f="ngForm" (ngSubmit)="onSaveContact(f.value)">
+    <div class="form-group">
+      <label class="control-label">Nom :</label>
+      <input class="form-control" type="text" name="nom" ngModel required>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Prénom :</label>
+      <input class="form-control" type="text" name="prenom" ngModel required>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Email :</label>
+      <input class="form-control" type="email" name="email" ngModel required email>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Date Naissance :</label>
+      <input class="form-control" type="date" name="dateNaissance" ngModel required>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label"> N° Tel :</label>
+      <input class="form-control" type="text" name="tel" ngModel required>
+    </div>
+    <button [disabled]="!f.valid" class="btn btn-primary" type="submit">Enregistrer</button>
+
+  </form>
+    </div>
+  </div>
+</div>
